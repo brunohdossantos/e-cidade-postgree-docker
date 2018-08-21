@@ -3,7 +3,7 @@ FROM postgres:9.5
 RUN apt-get update && apt-get install -y curl
 
 COPY pt_BR /usr/share/i18n/locales/pt_BR
-
+   
 RUN localedef -i pt_BR -c -f ISO-8859-1 -A /usr/share/locale/locale.alias pt_BR
 RUN locale-gen pt_BR
 RUN dpkg-reconfigure locales

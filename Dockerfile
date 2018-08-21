@@ -13,6 +13,7 @@ RUN dpkg-reconfigure locales
 #RUN export LC_ALL=pt_BR
 #RUN echo LC_ALL=pt_BR >> /etc/environment
 
+
 COPY postgresql.conf /setup/postgresql.conf
 
 COPY entrypoint/config-db.sh /docker-entrypoint-initdb.d/

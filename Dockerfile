@@ -8,6 +8,9 @@ RUN apt-get install locales
 
 COPY pt_BR /usr/share/i18n/locales/pt_BR
 
+RUN localedef -i pt_BR -c -f ISO-8859-1 -A /usr/share/locale/locale.alias pt_BR.UTF-8
+ENV LANG pt_BR.utf8
+
 #RUN localedef -i pt_BR -c -f ISO-8859-1 -A /usr/share/locale/locale.alias pt_BR
 #RUN locale-gen pt_BR
 #RUN dpkg-reconfigure locales

@@ -9,13 +9,6 @@ ENV LANG pt_BR.ISO-8859-1
 RUN export LC_ALL=pt_BR
 RUN echo LC_ALL=pt_BR >> /etc/environment
 
-#RUN localedef -i de_DE -c -f ISO-8859-1 -A /usr/share/i18n/locales/pt_BR pt_BR.ISO-8859-1
-#ENV LANG pt_BR.ISO-8859-1
-#RUN export LC_ALL=pt_BR
-#RUN echo LC_ALL=pt_BR >> /etc/environment   
-#teste
-
-
 COPY postgresql.conf /setup/postgresql.conf
 
 COPY entrypoint/config-db.sh /docker-entrypoint-initdb.d/

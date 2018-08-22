@@ -21,8 +21,5 @@ COPY entrypoint/config-db.sh /docker-entrypoint-initdb.d/
 COPY entrypoint/config-roles.sql /docker-entrypoint-initdb.d/
 COPY entrypoint/vacuum.sql /docker-entrypoint-initdb.d/
 
-<<<<<<< HEAD
+
 RUN curl -SL https://github.com/myersBR/e-cidade-postgree-docker/releases/download/2018/e-cidade20182.tar.gz | tar -xz -C /docker-entrypoint-initdb.d/
-=======
-RUN curl -SL https://github.com/myersBR/e-cidade-postgree-docker/releases/download/2018/e-cidade20182.tar | tar -xvf -C /docker-entrypoint-initdb.d/
->>>>>>> ca63e7d67334212613032f1f61eade8b90c4c51f

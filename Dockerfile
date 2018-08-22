@@ -1,6 +1,6 @@
 FROM postgres:9.5
 
-RUN apt -y install language-pack-gnome-pt language-pack-pt-base myspell-pt myspell-pt-br wbrazilian wportuguese
+#RUN apt -y install language-pack-gnome-pt language-pack-pt-base myspell-pt myspell-pt-br wbrazilian wportuguese
 
 RUN apt-get update && apt-get install -y curl
 

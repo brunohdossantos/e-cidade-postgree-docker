@@ -13,8 +13,8 @@ COPY pt_BR /usr/share/i18n/locales/pt_BR
 #RUN localedef -i pt_BR -c -f ISO-8859-1 -A /usr/share/locale/locale.alias pt_BR
 #RUN locale-gen pt_BR.utf-8
 
-RUN apt-get update && apt-get install -y locales && rm -rf /var/lib/apt/lists/* \
-    && localedef -i pt_BR -c -f ISO-8859-1 -A /usr/share/locale/locale.alias pt_BR
+#RUN apt-get update && apt-get install -y locales && rm -rf /var/lib/apt/lists/* \
+ #   && localedef -i pt_BR -c -f ISO-8859-1 -A /usr/share/locale/locale.alias pt_BR
 
 RUN locale-gen --purge pt_BR.ISO-8859-1
 

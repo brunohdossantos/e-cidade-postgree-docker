@@ -22,6 +22,8 @@ RUN echo -e 'LANG="pt_BR.ISO-8859-1"\nLANGUAGE="pt_BR:pt"\n' > /etc/default/loca
 
 ENV LANG pt_BR.ISO-8859-1
 
+RUN export LC_CTYPE=pt_BR.ISO-8859-1
+
 #RUN dpkg-reconfigure locales -force
 
 COPY postgresql.conf /setup/postgresql.conf

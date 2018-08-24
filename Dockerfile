@@ -9,6 +9,8 @@ RUN apt-get install -y locales
 RUN apt-get update && apt-get install -y locales && rm -rf /var/lib/apt/lists/* \
 	&& localedef -i pt_BR -c -f ISO-8859-1 -A /usr/share/locale/locale.alias pt_BR.ISO-8859-1
 
+RUN export LANG=pt_BR.ISO-8859-1
+
 ENV LANG pt_BR.ISO-8859-1
 
 #COPY pt_BR /usr/share/i18n/locales/pt_BR
@@ -21,13 +23,13 @@ ENV LANG pt_BR.ISO-8859-1
 #RUN apt-get update && apt-get install -y locales && rm -rf /var/lib/apt/lists/* \
  #   && localedef -i pt_BR -c -f ISO-8859-1 -A /usr/share/locale/locale.alias pt_BR
 
-RUN locale-gen --purge pt_BR.ISO-8859-1
+#RUN locale-gen --purge pt_BR.ISO-8859-1
 
-RUN echo -e 'LANG="pt_BR.ISO-8859-1"\nLANGUAGE="pt_BR:pt"\n' > /etc/default/locale
+#RUN echo -e 'LANG="pt_BR.ISO-8859-1"\nLANGUAGE="pt_BR:pt"\n' > /etc/default/locale
 
-ENV LANG pt_BR.ISO-8859-1
+#ENV LANG pt_BR.ISO-8859-1
 
-RUN export LC_CTYPE=pt_BR.ISO-8859-1
+#RUN export LC_CTYPE=pt_BR.ISO-8859-1
 
 #RUN dpkg-reconfigure locales -force
 

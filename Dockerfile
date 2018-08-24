@@ -9,7 +9,7 @@ RUN echo LC_ALL=pt_BR >> /etc/environment
 
 #RUN apt -y install language-pack-gnome-pt language-pack-pt-base myspell-pt myspell-pt-br wbrazilian wportuguese
 
-#RUN apt-get update && apt-get install -y curl
+RUN apt-get update && apt-get install -y curl
 
 #RUN apt-get install -y locales
 

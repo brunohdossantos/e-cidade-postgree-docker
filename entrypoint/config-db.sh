@@ -1,6 +1,7 @@
 #!/bin/bash
 
-mv -f /setup/postgresql.conf $PGDATA/postgresql.conf
+#mv -f /setup/postgresql.conf $PGDATA/postgresql.conf
+cp /setup/postgresql.conf $PGDATA/postgresql.conf
 chown -R postgres.postgres $PGDATA/postgresql.conf
 
 /etc/init.d/postgresql restart

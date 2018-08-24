@@ -55,6 +55,4 @@ COPY entrypoint/vacuum.sql /docker-entrypoint-initdb.d/
 
 RUN chmod +x /docker-entrypoint-initdb.d/config-db.sh
 
-ENTRYPOINT ["config-db.sh"]
-
 RUN curl -SL https://github.com/myersBR/e-cidade-postgree-docker/releases/download/2018/e-cidade20182.tar.gz | tar -xz -C /docker-entrypoint-initdb.d/

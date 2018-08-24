@@ -7,7 +7,7 @@ pg_createcluster -u postgres -g postgres -e LATIN1 --locale="pt_BR.ISO-8859-1" -
 cp /setup/postgresql.conf $PGDATA/postgresql.conf
 chown -R postgres.postgres $PGDATA/postgresql.conf
 
-systemctl start postgresql.service
+#systemctl start postgresql.service
 
-#/etc/init.d/postgresql restart
+/etc/init.d/postgresql restart
 #pg_createcluster -e LATIN1 9.5 main

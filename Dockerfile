@@ -1,4 +1,4 @@
-FROM postgres:9.5
+FROM postgres:9.2
 
 COPY pt_BR /usr/share/i18n/locales/pt_BR
 

@@ -1,3 +1,6 @@
+DROP ROLE IF EXISTS ecidade;
+DROP ROLE IF EXISTS dbseller;
+DROP ROLE IF EXISTS plugin;
 create role ecidade with superuser login password 'ecidade';
 create role dbseller with login password 'dbseller';
 create role plugin with login password 'plugin';

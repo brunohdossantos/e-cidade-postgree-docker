@@ -4,7 +4,7 @@
 
 --IF NOT EXISTS (SELECT * FROM pg_user WHERE username = 'ecidade')
 --BEGIN
-    --create role ecidade with superuser login password 'ecidade';
+    create role ecidade with superuser login password 'ecidade';
 --END;
 
 --IF NOT EXISTS (SELECT * FROM pg_user WHERE username = 'dbseller')

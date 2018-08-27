@@ -10,4 +10,4 @@ chown -R postgres.postgres $PGDATA/postgresql.conf
 #systemctl start postgresql.service
 
 /etc/init.d/postgresql restart
-#pg_createcluster -e LATIN1 9.5 main
+pg_createcluster -e LATIN1 9.5 main

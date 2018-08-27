@@ -3,18 +3,18 @@
 --DROP ROLE IF EXISTS plugin;
 
 --IF NOT EXISTS (SELECT * FROM pg_user WHERE username = 'ecidade')
-BEGIN
+--BEGIN
     create role ecidade with superuser login password 'ecidade';
-END;
+--END;
 
 --IF NOT EXISTS (SELECT * FROM pg_user WHERE username = 'dbseller')
-BEGIN
+--BEGIN
     create role dbseller with login password 'dbseller';
-END;
+--END;
 
 --IF NOT EXISTS (SELECT * FROM pg_user WHERE username = 'plugin')
-BEGIN
+--BEGIN
     create role plugin with login password 'plugin';
-END;
+--END;
 
 --GRANT ALL PRIVILEGES ON DATABASE "e-cidade" to ecidade;
